@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa 2</title>
+</head>
+<body>
+  <canvas width="1000" height="1000"></canvas>
+<script>
+
+
+function dibujarCuadro(x,y,color){
+  var pantalla = document.querySelector("canvas");
+  var pincel=pantalla.getContext("2d");
+  pincel.fillStyle=color;
+  pincel.fillRect(x,y,50,50)
+  pincel.strokeStyle="black";
+  pincel.strokeRect(x,y,50,50);
+  
+}
+// var x=0;
+// while (x<600){
+//   dibujarCuadro(x,0,"yellow");
+//   dibujarCuadro(x,50,"yellow");
+//   dibujarCuadro(x,100,"blue");
+//   dibujarCuadro(x,150,"red");
+//   x=x+50;
+// }
+// for (var x=0;x<600;x=x+50){
+//   dibujarCuadro(x,0,"yellow");
+//   dibujarCuadro(x,50,"yellow");
+//   dibujarCuadro(x,100,"blue");
+//   dibujarCuadro(x,150,"red");
+// }
+
+
+function dibujarCuadroazul(){
+var x = 0;
+var y = 0;
+
+for (var x=0;x<=800;x=x+50){
+      for(var y=0;y<=600;y=y+50){ 
+        dibujarCuadro(x,y,"blue");
+      }
+    }
+  }
+
+  dibujarCuadroazul()
+
+</script>
+</body>
+</html>
